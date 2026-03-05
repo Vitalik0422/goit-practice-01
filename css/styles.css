@@ -1,0 +1,675 @@
+:root {
+  --main-color: #fbfbfb;
+  --green-color: #1b414b;
+  --black-color: #040306;
+  --dark-green-color: #0e1823;
+}
+/* ==============RESET DEFOLT STYLES=============== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ol,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* ===================BODY===================== */
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  position: relative;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--main-color);
+  background-color: var(--dark-green-color);
+}
+
+/* ==================HEADER==================== */
+.header {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  max-width: 1180px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 767px) {
+    padding: 0 20px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0 32px;
+  }
+}
+.header-wrapper {
+  background-color: var(--main-color);
+  padding: 0 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    height: 48px;
+  }
+}
+
+.logo {
+  color: var(--green-color);
+  font-weight: 500;
+}
+.navigation-page {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+.navigation-list {
+  display: flex;
+  gap: 4px;
+}
+
+.navigation-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  width: 91px;
+  height: 40px;
+  background-color: var(--green-color);
+  opacity: 0.5;
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+  opacity: 1;
+}
+
+.social-list {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 8px;
+  }
+}
+.social-icon {
+  fill: var(--green-color);
+  cursor: pointer;
+}
+.burger-btn {
+  justify-content: center;
+  display: flex;
+  gap: 7px;
+  flex-direction: column;
+  border: none;
+  background-color: var(--main-color);
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.burger-btn::before,
+.burger-btn::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: var(--green-color);
+  border-radius: 2px;
+}
+
+/* =======================MAIN======================== */
+
+/* ======================= HERO SECTION=============== */
+.hero-section {
+  background-image: url(../image/image1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 265px;
+  padding-bottom: 180px;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-title {
+  font-weight: 500;
+  font-size: 32px;
+  color: var(--main-color);
+  max-width: 1001px;
+  text-align: center;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 70px;
+  }
+}
+.hero-description {
+  text-align: center;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.67;
+  color: var(--main-color);
+  opacity: 0.7;
+  max-width: 597px;
+  margin-bottom: 48px;
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    width: 597px;
+  }
+}
+.link-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  width: 141px;
+  height: 46px;
+  background-color: var(--green-color);
+  color: var(--main-color);
+  font-weight: 500;
+  line-height: 1.28;
+}
+
+/* =================YACHT BENEFITS ================ */
+
+.yachts-benefits-section {
+  padding: 0 50px;
+}
+
+.benefits-container {
+  background-color: var(--main-color);
+  border-radius: 26px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.benefits-content-container {
+  padding: 50px 50px 100px;
+  display: flex;
+  column-gap: 300px;
+
+  @media screen and (max-width: 768px) {
+    row-gap: 40px;
+  }
+
+  @media screen and (max-width: 1280px) {
+    flex-direction: column;
+    row-gap: 50px;
+  }
+}
+.benefits-description-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 404px;
+}
+
+.benefits-title {
+  max-width: 537px;
+  font-weight: 500;
+  font-size: 48px;
+  color: var(--green-color);
+
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+.benefits-subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--green-color);
+}
+
+.benefits-description {
+  margin-top: 20px;
+  font-size: 12px;
+  color: var(--green-color);
+  opacity: 0.4;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+.benefits-yacht-photo {
+  width: 100%;
+}
+
+/* =================== Yacht Rent ==================== */
+.yacht-rental-section {
+  padding: 150px 0;
+}
+
+.yacht-rental-container {
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.yacht-rent-title {
+  font-weight: 500;
+  font-size: 48px;
+  text-align: center;
+  max-width: 714px;
+  margin-bottom: 75px;
+}
+
+.yacht-rent-card-list {
+  column-gap: 32px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  @media screen and (max-width: 1280px) {
+    column-gap: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .yacht-rent-card-list > *:nth-child(n + 2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  .yacht-rent-card-list > *:nth-child(n + 3) {
+    display: none;
+  }
+}
+
+.yacht-rent-card-item {
+  border-radius: 24px;
+  max-width: 392px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  background-color: var(--main-color);
+}
+
+.yacht-rent-img {
+  width: 100%;
+}
+
+.yacht-rent-thumb {
+  margin: 0 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid;
+  border-color: rgba(4, 3, 6, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.yacht-rent-card-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  color: var(--green-color);
+}
+
+.yacht-rent-card-text {
+  width: 114px;
+  font-size: 13px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: var(--black-color);
+  opacity: 0.4;
+}
+
+.yacht-spec-thumb {
+  display: flex;
+  padding: 16px;
+  justify-content: space-between;
+}
+.yacht-spec-name-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.yacht-spec-name-item {
+  width: 62px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: var(--black-color);
+  opacity: 0.4;
+}
+
+.yacht-spec-param-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+}
+
+.yacht-spec-param-item {
+  width: 96px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  color: var(--black-color);
+}
+
+.yacht-rent-menu-link {
+  padding: 16px 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.1;
+  border: 1px solid rgba(251, 251, 251, 0.35);
+  border-radius: 15px;
+}
+
+/* =================== YACHT-ACTIVITIES ================ */
+
+.yacht-activities-container {
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+
+  @media screen and (max-width: 1280px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.yacht-activities-list {
+  flex: 1 1 60%;
+  min-width: 0;
+  padding: 90px 50px;
+  background-color: var(--green-color);
+  border-radius: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 40px;
+  box-sizing: border-box;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  @media screen and (max-width: 1280px) {
+    max-width: 704px;
+  }
+}
+.yacht-activities-item {
+  flex-basis: calc((100% - 32px) / 2);
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+
+.yacht-activities-title {
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: -0.05em;
+  color: var(--main-color);
+}
+
+.horizontal-line {
+  content: '';
+  width: 100%;
+  height: 2px;
+  border-radius: 18px;
+  background: rgba(251, 251, 251, 0.1);
+}
+
+.yacht-activities-photo {
+  min-width: 0;
+  max-width: 540px;
+  border-radius: 24px;
+  object-fit: cover;
+  object-position: center;
+
+  @media screen and (max-width: 1280px) {
+    max-width: 100%;
+  }
+}
+
+/* ======================SECTION - FORM ============= */
+
+.yacht-rent-form-section {
+  padding: 150px 0;
+}
+
+.yacht-rent-form-container {
+  padding: 0 100px 0 50px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
+
+  @media screen and (max-width: 1280px) {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    padding: 0 50px;
+    row-gap: 100px;
+  }
+}
+
+.yacht-rent-photo {
+  min-width: 0;
+  max-width: 768px;
+  border-radius: 24px;
+  object-fit: cover;
+  object-position: center;
+}
+.yacht-rent-form {
+  width: 100%;
+  max-width: 508px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-title {
+  font-weight: 500;
+  font-size: 48px;
+  margin-bottom: 32px;
+}
+
+.yacht-rent-form-input {
+  max-width: 508px;
+  border: 1px soli9d rgba(251, 251, 251, 0.2);
+  border-radius: 12px;
+  row-gap: 18px;
+  padding: 18px;
+  background: none;
+  color: var(--main-color);
+}
+
+.yacht-rent-form-input:focus {
+  outline: 2px solid var(--main-color);
+}
+
+.yacht-rent-form-comment {
+  height: 116px;
+  width: 100%;
+  padding: 18px;
+  resize: none;
+  border: 1px solid rgba(251, 251, 251, 0.2);
+  border-radius: 12px;
+  background: none;
+  margin-bottom: 32px;
+  color: var(--main-color);
+}
+
+.yacht-rent-form-comment:focus {
+  outline: var(--main-color) 2px solid;
+}
+
+.yacht-rent-form-subm-btn {
+  display: block;
+  border: none;
+  border-radius: 15px;
+  width: 194px;
+  padding: 18px 75px;
+  background-color: var(--green-color);
+  color: var(--main-color);
+  font-weight: 500;
+  line-height: 1.28;
+  cursor: pointer;
+}
+/* ================== FEEDBACK =================== */
+
+.yacht-rent-feedback-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 100px 150px;
+}
+
+.yacht-rent-feedback-title {
+  text-align: center;
+  max-width: 854px;
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.yacht-rent-feedback-description {
+  text-align: center;
+  max-width: 571px;
+  font-size: 14px;
+  line-height: 1.28571;
+  opacity: 0.4;
+  margin-bottom: 75px;
+}
+
+.rent-feedback-list {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 32px;
+}
+
+.rent-feedback-item {
+  text-align: center;
+  background: var(--main-color);
+  border-radius: 24px;
+  padding: 32px 36px;
+}
+
+@media screen and (max-width: 767px) {
+  .rent-feedback-list > *:nth-child(n + 2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .rent-feedback-list > *:nth-child(n + 3) {
+    display: none;
+  }
+}
+
+.feedback-person-avatar {
+  margin-bottom: 24px;
+}
+.rent-feedback-item-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.1;
+  color: var(--black-color);
+  margin-bottom: 8px;
+}
+.rent-feedback-item-text {
+  line-height: 1.4;
+  color: var(--black-color);
+  opacity: 0.4;
+}
+
+/* =============== FOOTER ================== */
+
+.footer-container {
+  padding: 50px 25px 20px;
+  background-color: var(--green-color);
+  border-radius: 24px 24px 0 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 96px;
+}
+
+.footer-navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  color: var(--main-color);
+  border-radius: 24px 24px 0 0;
+
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+    row-gap: 80px;
+  }
+}
+
+.footer-navigation-page {
+  display: flex;
+}
+
+.logo-footer {
+  color: var(--main-color);
+}
+
+.link-footer {
+  background: rgba(251, 251, 251, 0.3);
+  color: var(--main-color);
+}
+.icon-footer {
+  fill: var(--main-color);
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+}
+
+.footer-title {
+  font-size: 32px;
+  max-width: 700px;
+}
+
+.site-developer {
+  font-size: 14px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
